@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HangMan English</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Steve Moya Cepeda">
+    <meta name="description" content="HangMan">
+    <meta name="keywords" content="HangMan, Game">
+    <link rel="icon" href="assets/logo.svg">
+    <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon">
+    <link href="http://fonts.cdnfonts.com/css/sf-pixelate" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <script type="module" src="index.js" defer></script>
+</head>
+<body>
+    <div class="container__background-triangle">
+        <div class="triangle triangle1"></div>
+        <div class="triangle triangle2"></div>
+        <div class="triangle triangle3"></div>
+    </div>
+    <header>
+    <h1>HangMan in English</h1>
+    <h3>Just do it, Do it to be better, Do it to be happy</h3>
+    </header>
+    <div class="card">
+    <div>
+        <h2>Choose the difficulty first</h2>
+        <div class="difficulty-selector">
+            <input type="radio" name="difficulty" value="easy">
+            <label for="easy">😁Easy😁</label>
+            <input type="radio" name="difficulty" value="medium">
+            <label for="medium">😈Medium😈</label>
+            <input type="radio" name="difficulty" value="hard">
+            <label for="hard">💀Hard💀</label>
+          </div>
+        <canvas id="canvas"></canvas>
+        <div id="usedLetters"></div>
+    </div>
+    <div id="usedLetters"></div>
+    <div id="wordContainer"></div>
+    <div id="mistakes"></div>
+    <div id="wins"></div>
+    <div id="result"></div>
+    <button id="startButton">Start</button>
+    <p>By <a href="https://beacons.ai/steve_moya_cepeda" target="_blank">Steve Moya Cepeda</a></p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>   
+</body>
+</html>

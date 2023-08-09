@@ -1,0 +1,225 @@
+::-webkit-scrollbar{
+    width: 4px;
+    color:whitesmoke;
+    transition: all .4s ease;
+}
+::-webkit-scrollbar-thumb {
+    background: whitesmoke; 
+    border-radius: 4px;
+    width: 4px;
+    transition: all .4s ease;
+  }
+  ::-webkit-scrollbar-track {
+    background: #101010; 
+    border-radius: 4px;
+    width: 4px;
+  }
+body {
+    background: #000040;
+    color: #fff;
+    font-family: 'SF Pixelate', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    
+}
+.container__background-triangle{
+    max-width: 1200px;
+    height: 600px;
+    margin: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.triangle{
+    width: 300px;
+    height: 300px;
+    background: red;
+    position: absolute;
+}
+
+.triangle1{
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(to left, #0ea1e6, #1e67c7);
+    right: 100px;
+    top: 100px;
+    animation: t1 8s ease infinite;
+}
+
+.triangle2{
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(to left, #ee8105, #c7371e);
+    top: 350px;
+    animation: t2 9s ease infinite;
+}
+
+.triangle3{
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(to left, #1b8fc5, #df0f8f);
+    left: 200px;
+    animation: t3 7s ease infinite;
+}
+
+@keyframes t1 {
+    0%{
+        transform: rotate(45deg) translateY(0px);
+    }
+    50%{
+        transform: rotate(45deg) translateY(20px);
+    }
+    100%{
+        transform: rotate(45deg) translateY(0px);
+    }
+}
+
+@keyframes t2 {
+    0%{
+        transform: rotate(65deg) translateY(0px);
+    }
+    50%{
+        transform: rotate(65deg) translateY(20px);
+    }
+    100%{
+        transform: rotate(65deg) translateY(0px);
+    }
+}
+
+@keyframes t3 {
+    0%{
+        transform: rotate(45deg) translateY(0px);
+    }
+    50%{
+        transform: rotate(45deg) translateY(20px);
+    }
+    100%{
+        transform: rotate(45deg) translateY(0px);
+    }
+}
+header{
+    text-align: center;
+    z-index: 10;
+}
+.hidden {
+    color: transparent;
+}
+.card{
+    background: radial-gradient(circle, 
+    rgba(2,0,36,0.5) 0%, 
+    rgba(0,0,128,0.5) 0%, 
+    rgba(22,26,37,0.5) 99%, 
+    rgba(0,0,0,0.5) 100%);
+    border-radius: 25px;
+    padding: 10px 25px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-left: 1px solid rgba(255, 255, 255,0.5);
+    border-top: 1px solid rgba(255, 255, 255,0.5);
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    backdrop-filter: blur(6.1px);
+    -webkit-backdrop-filter: blur(6.1px);
+}
+h1{
+    font-size: 2.5rem;
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+    text-shadow: 0 0 20px #eee;
+}
+h2 {
+    padding: 5px;
+    font-size: 1.2rem;
+}
+input{
+    padding: 10px;
+    margin: 10px 0 30px 0;
+    font-weight: 600;
+    font-size: 2rem;
+    cursor: pointer;
+}
+#wordContainer {
+    margin-top: 20px;
+}
+
+.letter {
+    margin: 0 7px;
+    position: relative;
+    text-align: center;
+}
+
+.letter::after{
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    min-width: 12px;
+}
+         
+#startButton {
+    font-family: 'SF Pixelate', sans-serif;
+    background-image: linear-gradient(to right, #24C6DC 0%, #514A9D  51%, #24C6DC  100%);
+    margin: 10px auto;
+    padding: 10px 40px;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    appearance: none;
+    border: none;
+  }
+
+  #startButton:hover, #startButton:focus, #startButton:active {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+  }
+p{
+    text-align: center;
+}
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: yellowgreen;
+}
+
+@media screen and (max-width: 400px) {
+    body{
+        padding: 20px;
+    }
+    .card {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .card {
+        width: 90%;
+    }
+}
+    
