@@ -207,6 +207,14 @@ a {
 a:visited {
     color: yellowgreen;
 }
+.input{
+    display: none;
+}
+@media (pointer: coarse){
+    .input{
+        display: block;
+    }
+}
 
 @media screen and (max-width: 400px) {
     body{
