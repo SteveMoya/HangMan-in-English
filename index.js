@@ -48,7 +48,8 @@ let wins = 0;
 
 const addLetter = letter => {
     const letterElement = document.createElement('span');
-    document.getElementById('usedLetters').innerHTML = `<p>Letters Used: ${usedLetters}</p>`
+    document.getElementById('usedLetters').innerHTML = `<p>Letters Used: ${usedLetters}</p>
+    `
     usedLettersElement.appendChild(letterElement);
 }
 
@@ -64,11 +65,6 @@ const wrongLetter = () => {
     if(mistakes === bodyParts.length) endGame();
 }
 
-const inputElement = document.getElementById('wordContainer');
-inputElement.addEventListener('click', () => {
-    inputElement.focus();
-});
-
 const endGame = () => {
     document.removeEventListener('keydown', letterEvent);
     startButton.style.display = 'block';
@@ -82,7 +78,6 @@ const endGame = () => {
         document.getElementById('wins').innerHTML = `<h3>Victorias: ${wins}</h3>`;
         startButton.innerHTML = 'Next Word';
         jsConfetti.addConfetti();
-
     }
 }
 
@@ -108,13 +103,24 @@ const letterInput = letter => {
 };
 
 const letterEvent = event => {
-    let newLetter = event.key.toUpperCase();
-    if(newLetter.match(/^[a-zñ]$/i) && !usedLetters.includes(newLetter)) {
+    let newLetter = '';
+    
+    if (event.type === 'keydown') {
+        newLetter = event.key.toUpperCase();
+    } else if (event.type === 'input') {
+        newLetter = event.target.value.trim().toUpperCase();
+
+        if (newLetter.match(/^[a-zñ]$/i) && !usedLetters.includes(newLetter)) {
+            letterInput(newLetter);
+            event.target.value = '';}
+    }
+    
+    if (newLetter.match(/^[a-zñ]$/i) && !usedLetters.includes(newLetter)) {
         letterInput(newLetter);
-    }else {
-        alert('Invalid or previously used font. Select another');
     }
 };
+const inputElement = document.getElementById('input'); // Cambia 'textInput' al ID de tu input tipo texto
+inputElement.addEventListener('input', letterEvent);
 
 const drawWord = () => {
     selectedWord.forEach(letter => {

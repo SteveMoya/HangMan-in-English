@@ -152,6 +152,13 @@ input{
 }
 #wordContainer {
     margin-top: 20px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
 }
 
 .letter {
@@ -213,6 +220,12 @@ a:visited {
 @media (pointer: coarse){
     .input{
         display: block;
+        background-color: transparent;
+        border: none;
+        font-style: uppercase;
+}
+    .input:focus{
+        outline: none;
     }
 }
 
@@ -226,6 +239,9 @@ a:visited {
 }
 
 @media screen and (max-width: 600px) {
+    body{
+        padding: 20px;
+    }
     .card {
         width: 90%;
     }
