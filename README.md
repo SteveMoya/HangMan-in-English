@@ -1,5 +1,5 @@
 
-# Proyecto Pokemon - Fan Made
+# HangMan in English 🤵
 
 ![stevemoya github io_HangMan-in-English_](https://github.com/SteveMoya/HangMan-in-English/assets/114698709/8e32dd3f-1c6f-43f4-9874-a2d27a490f25)
 
